@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSAH</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+<body>
+
+    <!-- Top bar with search bar and open side panel button -->
+    <div class="top-bar">
+        <!-- Open side panel button -->
+        <div style="font-size: 30px; cursor: pointer;" onclick="openSidePanel()">☰</div>
+
+        <!-- Search bar -->
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+
+    <!-- Bubble buttons container -->
+    <div class="button-container">
+        <!-- Bubble buttons (moved to the left) -->
+        <a href="page1.html" class="bubble-button">Button 1</a>
+        <a href="page2.html" class="bubble-button">Button 2</a>
+        <a href="page3.html" class="bubble-button">Button 3</a>
+    </div>
+
+    <!-- Side panel -->
+    <div class="side-panel" id="sidePanel">
+        <div class="close-button" onclick="closeSidePanel()">×</div>
+        <a href="page4.html" class="bubble-button">Button 4</a>
+        <a href="page5.html" class="bubble-button">Button 5</a>
+        <!-- Add more buttons as needed -->
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
