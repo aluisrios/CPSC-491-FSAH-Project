@@ -1,9 +1,30 @@
 .bubble-button {
+    position: relative;
+    top: 15px;
     display: block;
     width: 100px;
-    padding: 5px 10px;
-    margin: 3px;
-    font-size: 16px;
+    padding: 10px 15px;
+    margin: 50px;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 0%;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.Newbubble-button 
+{
+    position: relative;
+    top:-260px;
+    left: 400px;
+    display: block;
+    width: 100px;
+    padding: 10px 15px;
+    margin: 50px;
+    font-size: 18px;
     text-align: left;
     border-radius: 0%;
     background-color: #3498db;
@@ -15,6 +36,8 @@
 
 /* Style for search bar */
 .search-bar {
+    position: relative;
+    left: 130px;
     width: 200px;
     padding: 10px;
     font-size: 16px;
@@ -28,10 +51,10 @@
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #333;
+    background-color: #403d3d;
     transition: 0.3s;
     padding-top: 60px;
-    color: #fff;
+    color: #ffffff;
 }
 
 /* Style for close button in side panel */
@@ -41,17 +64,6 @@
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-}
-
-/* Additional styles for layout */
-.button-container {
-    position: fixed;
-    left: 0;
-    top: 13%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .top-bar {
