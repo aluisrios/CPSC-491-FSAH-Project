@@ -1,3 +1,3 @@
 <?php
-    $con = mysqli_connect("localhost", "root", "", "cpsc-491-fsah-project") or die(myslq_error());
+    $con = mysqli_connect("localhost", "root", "", "CPSC-491-FSAH-Project") or die(myslq_error());
 ?>
