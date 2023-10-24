@@ -1,3 +1,29 @@
+<?php
+    session_start();
+
+    include("db.php");
+
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+    {
+        $name = $_POST['fullname'];
+        $email = $_POST['user'];
+        $password = $_POST['pass'];
+
+        if(!empty($email) && !empty($password) && !is_numeric($email))
+        {
+            $query = "insert into form (name, email, password) values ('$name' , '$email' , '$password')";
+
+            mysqli_query($con, $query);
+        }
+
+        else 
+        {
+            echo "<script type= 'text/javascript'> alert('please Enter some valid information') </script>";
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,27 +38,27 @@
 <div class="login-container">
     <div class="form-box">
         <h2 id="title"> Log In</h2>
-        <form>
+        <form method="POST">
             <div class="input-field" id="nameField">
                 <label for="name">Name</label>
-                <input type="text" id="Name" placeholder="Name">
+                <input type="text" name="fullname" id="Name" placeholder="Name">
             </div>
 
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Enter your username">
+                <input type="text" name="user" id="username" placeholder="Enter your username">
             </div>
 
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password">
+                <input type="password" name="pass" id="password" placeholder="Enter your password">
             </div>
 
             <div class="btn-field"> 
-                <button type="button" class="disable" id="signinBtn">Sign In</button>
-                <button type="button" id="signupBtn">Sign Up</button>
+                <button type="submit" id="signupBtn"> Sign Up </button>
             </div>
-           
+            
+            <p>Already have an account? <a href='LoginPage.php' > Login </p>
 
         </form>
     </div>
