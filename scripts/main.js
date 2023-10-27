@@ -1,34 +1,23 @@
 function openSidePanel() {
-    document.getElementById("sidePanel").style.left = "0";
+    document.getElementById("sidePanel").style.left = "0px";
 }
 
 function closeSidePanel() {
     document.getElementById("sidePanel").style.left = "-250px";
 }
 
-signinBtn.onclick = function(event) {
-    if (document.getElementById("formStateField").value === "signup") {
-        // Switch to Sign In state
-        event.preventDefault();
-        nameField.style.maxHeight = "0";
-        title.innerHTML = "Sign In";
-        signupBtn.classList.remove("disable");
-        signinBtn.classList.add("disable");
-        document.getElementById("formStateField").value = "signin";
+function searchFunction() {
+    var input, filter, buttons, i, txtValue;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    buttons = document.getElementsByClassName('bubble-button');
+    
+    for (i = 0; i < buttons.length; i++) {
+        txtValue = buttons[i].textContent || buttons[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            buttons[i].style.display = "";
+        } else {
+            buttons[i].style.display = "none";
+        }
     }
-    // Else: The form will be submitted
 }
-
-signupBtn.onclick = function(event) {
-    if (document.getElementById("formStateField").value === "signin") {
-        // Switch to Sign Up state
-        event.preventDefault();
-        nameField.style.maxHeight = "60px";
-        title.innerHTML = "Sign Up";
-        signupBtn.classList.add("disable");
-        signinBtn.classList.remove("disable");
-        document.getElementById("formStateField").value = "signup";
-    }
-    // Else: The form will be submitted
-}
-
