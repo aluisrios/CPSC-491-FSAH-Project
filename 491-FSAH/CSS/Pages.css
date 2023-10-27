@@ -1,0 +1,21 @@
+/* Paragraph Style */
+.Para {
+    margin-bottom: 1em; /* Adds spacing after each paragraph */
+    font-family: Arial, sans-serif; /* Using a common web-safe font */
+    font-size: 18px; /* Default font size for the entire page */
+    line-height: 1.6; /* For better readability */  
+}
+.pages{
+    font-size: 24px;  
+}
+
+/* Link Style */
+a {
+    color: rgb(0, 0, 255); /* You can choose any color you like */
+    text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline appears when you hover over the link */
+}
+
