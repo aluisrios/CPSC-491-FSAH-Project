@@ -8,38 +8,25 @@
 </head>
 <body>
 
-    <style>
-        body
-        {
-            background: url("https://imageio.forbes.com/specials-images/imageserve/604bd0c6d9c87e3b8f59de0c/0x0.jpg?format=jpg&width=1200");
-        }
-    </style>
-    
-    <!-- Top bar with search bar and open side panel button -->
-    <div class="top-bar">
-        <!-- Open side panel button -->
-        <div onclick="openSidePanel()" style="color: rgb(251, 156, 24); font-weight: bold;">☰</div>
+    <!-- Container for side panel button and search bar -->
+    <div class="top-container">
+        <!-- Button to open the side panel -->
+        <div class="menu-button" onclick="openSidePanel()" style="cursor: pointer; font-size: 35px; color: orange;">☰</div>
 
-
-
-        <!-- Search bar -->
-        <input type="text" id="searchInput" class="search-bar" placeholder="Search...">
-
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search..." oninput="searchFunction()">
+        </div>
     </div>
 
     <!-- Bubble buttons container -->
     <div class="button-container">
-        <!-- Bubble buttons (moved to the left) -->
         <a href="page1.html" class="bubble-button" data-name="Cal Grant A">Cal Grant A</a>
         <a href="page2.html" class="bubble-button" data-name="Cal Grant B">Cal Grant B</a>
         <a href="page3.html" class="bubble-button" data-name="Pell Grant">Pell Grant</a>
-
-    </div>
-
-    <div>
-        <a href="page4.html" class="Newbubble-button" data-name="Federal Supplemental Educational Opportunity Grant (FSEOG)">FSEOG</a>
-        <a href="page5.html" class="Newbubble-button" data-name="Middle Class Scholarship (MCS)">MCS</a>
-        <a href="page6.html" class="Newbubble-button" data-name="button 3">button 3</a>
+        <a href="page4.html" class="bubble-button" data-name="FSEOG">FSEOG</a>
+        <a href="page5.html" class="bubble-button" data-name="MCS">MCS</a>
+        <a href="page6.html" class="bubble-button" data-name="SUG">SUG</a>
     </div>
 
     <!-- Side panel -->
@@ -47,7 +34,6 @@
         <div class="close-button" onclick="closeSidePanel()">×</div>
         <a href="page7.html" class="Panelbubble-button" data-name="Button 4">Button 4</a>
         <a href="page8.html" class="Panelbubble-button" data-name="Button 5">Button 5</a>
-        <!-- Add more buttons as needed -->
     </div>
 
     <script src="main.js"></script>
