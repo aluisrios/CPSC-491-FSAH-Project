@@ -1,16 +1,22 @@
-*{
-    margin:0;
-    padding: 0;
+body {
+    background: url("https://imageio.forbes.com/specials-images/imageserve/604bd0c6d9c87e3b8f59de0c/0x0.jpg?format=jpg&width=1200");
 }
 
+.top-container {
+    display: flex;
+    justify-content: space-between;  /* Distributes items evenly */
+    align-items: center;  /* Vertically center items */
+    padding: 10px 0;  /* Some padding to give it some space */
+    color: #fff; /* White text color */
+}
 
 .bubble-button {
     position: relative;
-    top: 15px;
-    display: block;
+    top: -20px;
+    margin: 15px;
+    display: inline-block; /* Changed from block to inline-block */
     width: 100px;
     padding: 10px 15px;
-    margin: 50px;
     font-size: 18px;
     text-align: left;
     border-radius: 0%;
@@ -18,18 +24,18 @@
     color: #fff;
     text-decoration: none;
     cursor: pointer;
-    white-space: nowrap; /* Prevent line breaks */
+    white-space: nowrap;
 }
 
-.Newbubble-button 
+
+.Panelbubble-button
 {
     position: relative;
-    top:-260px;
-    left: 400px;
+    top: -40px;
+    margin: 20px;
     display: block;
     width: 100px;
     padding: 10px 15px;
-    margin: 50px;
     font-size: 18px;
     text-align: left;
     border-radius: 0%;
@@ -37,48 +43,63 @@
     color: #fff;
     text-decoration: none;
     cursor: pointer;
-    white-space: nowrap; /* Prevent line breaks */
-}
-
-/* Style for search bar */
-.search-bar {
-    position: relative;
-    left: 130px;
-    width: 200px;
-    padding: 10px;
-    font-size: 16px;
+    white-space: nowrap;
     display: inline-block;
 }
 
-/* Style for side panel */
 .side-panel {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Initially hidden */
     width: 250px;
     height: 100%;
     background-color: #403d3d;
     transition: 0.3s;
     padding-top: 60px;
     color: #ffffff;
+    z-index: 1000;
 }
 
-/* Style for close button in side panel */
+.menu-button {
+    margin-top: -25px;  /* Adjust as needed */
+}
+
+
 .close-button {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-}
-
-.top-bar {
-    font-size: 30px; 
-    cursor: pointer;
-    display: flex;
-    align-items: center;
     color: #ffffff;
 }
+
+/* Styles for the search bar and button */
+.search-container {
+    position: relative;
+    right: 200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
 
 .Home {
     width: 100%;
