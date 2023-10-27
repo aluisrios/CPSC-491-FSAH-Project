@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSAH</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="robot.css">
 </head>
 <body>
 
-    <div class="back">
-            <!-- Container for side panel button and search bar -->
-            <div class="top-container">
-            <!-- Button to open the side panel -->
-            <div class="menu-button" onclick="openSidePanel()" style="cursor: pointer; font-size: 35px; color: orange;">☰</div>
+    <!-- Container for side panel button and search bar -->
+    <div class="top-container">
+        <!-- Button to open the side panel -->
+        <div class="menu-button" onclick="openSidePanel()" style="cursor: pointer; font-size: 35px; color: orange;">☰</div>
 
-            <!-- Search Bar -->
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search..." oninput="searchFunction()">
-            </div>
-
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search..." oninput="searchFunction()">
+        </div>
     </div>
 
     <!-- Bubble buttons container -->
@@ -34,10 +33,24 @@
     <!-- Side panel -->
     <div class="side-panel" id="sidePanel">
         <div class="close-button" onclick="closeSidePanel()">×</div>
-        <a href="page7.html" class="Panelbubble-button" data-name="Button 4">Button 4</a>
-        <a href="page8.html" class="Panelbubble-button" data-name="Button 5">Button 5</a>
+        <a href="page7.html" class="Panelbubble-button" data-name="Button 4">Bookmark</a>
+        <a href="page8.html" class="Panelbubble-button" data-name="Button 5">Support</a>
     </div>
 
-    <script src="scripts/main.js"></script>
+    <!-- Robot structure and animations -->
+    <div class="face"></div>
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="left-hand"></div>
+    <div class="right-hand"></div>
+    <div class="eye1"></div>
+    <div class="eye2"></div>
+
+    <!-- Robot introduction and website prompt -->
+    <div class="robot-introduction">Hello, I'm Jerry!</div>
+    <div class="website-prompt">Welcome to FSAH! This website is for......!</div>
+
+    <script src="main.js"></script>
+
 </body>
 </html>
