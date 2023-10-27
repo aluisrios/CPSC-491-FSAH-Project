@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSAH</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
 
     <div class="back">
-    <!-- Container for side panel button and search bar -->
-    <div class="top-container">
-        <!-- Button to open the side panel -->
-        <div class="menu-button" onclick="openSidePanel()" style="cursor: pointer; font-size: 35px; color: orange;">☰</div>
+            <!-- Container for side panel button and search bar -->
+            <div class="top-container">
+            <!-- Button to open the side panel -->
+            <div class="menu-button" onclick="openSidePanel()" style="cursor: pointer; font-size: 35px; color: orange;">☰</div>
 
-        <!-- Search Bar -->
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search..." oninput="searchFunction()">
-        </div>
-    </div>
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search..." oninput="searchFunction()">
+            </div>
 
     </div>
 
@@ -39,6 +38,6 @@
         <a href="page8.html" class="Panelbubble-button" data-name="Button 5">Button 5</a>
     </div>
 
-    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

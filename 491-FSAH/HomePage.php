@@ -22,7 +22,7 @@
         <br>we can help with any question you make have, or how you could apply. </p>
        
         <div class="button">
-            <button type="Apply"><a href='SignUp.php' ><span></span>APPLY </button>
+            <button type="button" a href='SignUp.php'><span></span>APPLY </button> 
             <button tyoe="button"><span></span> SUPPORT </button>
         </div>
 
