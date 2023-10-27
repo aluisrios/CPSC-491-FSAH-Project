@@ -8,6 +8,7 @@
 </head>
 <body>
 
+    <div class="back">
     <!-- Container for side panel button and search bar -->
     <div class="top-container">
         <!-- Button to open the side panel -->
@@ -17,6 +18,8 @@
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Search..." oninput="searchFunction()">
         </div>
+    </div>
+
     </div>
 
     <!-- Bubble buttons container -->
