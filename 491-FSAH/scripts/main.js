@@ -1,21 +1,23 @@
 function openSidePanel() {
-    document.getElementById("sidePanel").style.left = "0";
+    document.getElementById("sidePanel").style.left = "0px";
 }
 
 function closeSidePanel() {
     document.getElementById("sidePanel").style.left = "-250px";
 }
 
-
-document.getElementById('searchInput').addEventListener('input', function() {
-    let searchTerm = this.value.toLowerCase();
-    let buttons = document.querySelectorAll('.bubble-button, .Newbubble-button');
-
-    buttons.forEach(button => {
-        if (button.getAttribute('data-name').toLowerCase().includes(searchTerm)) {
-            button.style.display = 'block';
+function searchFunction() {
+    var input, filter, buttons, i, txtValue;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    buttons = document.getElementsByClassName('bubble-button');
+    
+    for (i = 0; i < buttons.length; i++) {
+        txtValue = buttons[i].textContent || buttons[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            buttons[i].style.display = "";
         } else {
-            button.style.display = 'none';
+            buttons[i].style.display = "none";
         }
-    });
-});
+    }
+}
