@@ -37,7 +37,7 @@
 <body>
 <div class="login-container">
     <div class="form-box">
-        <h2 id="title"> Log In</h2>
+        <h2 id="title"> Sign Up</h2>
         <form method="POST">
             <div class="input-field" id="nameField">
                 <label for="name">Name</label>
