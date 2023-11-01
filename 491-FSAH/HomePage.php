@@ -10,8 +10,8 @@
         <div class="navbar">
             <img src="LOGO.png" class="logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Apply</a></li>
+                <li><a href="HomePage.php">Home</a></li>
+                <li><a href="SignUp.php">Apply</a></li>
                 <li><a href="#">Support</a></li>
             </ul>
         </div>
@@ -22,7 +22,7 @@
         <br>we can help with any question you make have, or how you could apply. </p>
        
         <div class="button">
-            <button type="button" a href='SignUp.php'><span></span>APPLY </button> 
+            <a href='SignUp.php'><button type="button"><span></span>APPLY</button></a>
             <button tyoe="button"><span></span> SUPPORT </button>
         </div>
 
