@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSAH</title>
-    <link rel="stylesheet" href="CSS/styles.css" >
-    <link rel="stylesheet" href="CSS/robot.css">
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="robot.css">
 </head>
 <body>
 
@@ -34,8 +34,8 @@
     <!-- Side panel -->
     <div class="side-panel" id="sidePanel">
         <div class="close-button" onclick="closeSidePanel()">×</div>
-        <a href="page7.html" class="Panelbubble-button" data-name="Button 4">Button 4</a>
-        <a href="page8.html" class="Panelbubble-button" data-name="Button 5">Button 5</a>
+        <a href="page7.html" class="Panelbubble-button" data-name="Support">Support</a>
+        <a href="page8.html" class="Panelbubble-button" data-name="Bookmark">Bookmark</a>
     </div>
 
     <!-- Robot structure and animations -->
@@ -49,8 +49,10 @@
 
     <!-- Robot introduction and website prompt -->
     <div class="robot-introduction">Hello, I'm Jerry!</div>
-    <div class="website-prompt">Welcome to FSAH! This website is for......!</div>
+    <div class="website-prompt">Welcome to FSAH! Here at Financial Student Aid Helper (FSAH), we're all about helping you get through college with as little debt as possible. 
+        We've gathered every financial aid option available in your school to make finding and applying for assistance easy and quick—no more waiting weeks for advisor appointments. 
+        With FSAH, you're on track to land your dream job after graduation without the heavy burden of student loans!</div>
 
-    <script src="scripts/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
