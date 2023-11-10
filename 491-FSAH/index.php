@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSAH</title>
-    <link rel="stylesheet" href="styles.css" >
-    <link rel="stylesheet" href="robot.css">
+    <link rel="stylesheet" href="CSS/styles.css" >
+    <link rel="stylesheet" href="CSS/robot.css">
 </head>
 <body>
 
@@ -53,6 +53,6 @@
         We've gathered every financial aid option available in your school to make finding and applying for assistance easy and quick—no more waiting weeks for advisor appointments. 
         With FSAH, you're on track to land your dream job after graduation without the heavy burden of student loans!</div>
 
-    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
