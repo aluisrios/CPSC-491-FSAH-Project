@@ -4,26 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Pages.css">
-
 </head>
 <body>
     <a href="index.php">Home</a>
 
     <div class="pages">   
         
-        <h2 id class="title">Federal Supplemental Educational Opportunity Grant (FSEOG)</h2>
+        <h2 id class="title">Bookmark</h2>
         
         <div class="Para">
-            <p> Available to undergraduate students who demonstrate financial need. Funding is limited and awarding priority is given to Pell Grant recipients.
-                CSUF Annual Award Maximum: $800</p>
-                
+           
         </div>
-
-
-
-        
     </div>
- 
 </body>
 </html>
-

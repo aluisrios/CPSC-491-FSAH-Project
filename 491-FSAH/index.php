@@ -35,7 +35,7 @@
     <div class="side-panel" id="sidePanel">
         <div class="close-button" onclick="closeSidePanel()">×</div>
         <a href="page7.html" class="Panelbubble-button" data-name="Support">Support</a>
-        <a href="page8.html" class="Panelbubble-button" data-name="Bookmark">Bookmark</a>
+        <a href="page8.php" class="Panelbubble-button" data-name="Bookmark">Bookmark</a>
     </div>
 
     <!-- Robot structure and animations -->
@@ -54,5 +54,6 @@
         With FSAH, you're on track to land your dream job after graduation without the heavy burden of student loans!</div>
 
     <script src="scripts/main.js"></script>
+
 </body>
 </html>
