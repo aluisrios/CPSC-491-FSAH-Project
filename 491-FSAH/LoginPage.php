@@ -65,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         </form>
     </div>
 </div>
+
 <script>
 let signinBtn = document.getElementById("signinBtn");
 let signupBtn = document.getElementById("signupBtn");
@@ -84,7 +85,6 @@ signupBtn.onclick = function() {
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
 }
-
 </script>
 
 

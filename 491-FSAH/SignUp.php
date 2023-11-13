@@ -8,16 +8,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $user = $_POST['user'];
     $password = $_POST['pass'];
     $email = $_POST['mail'];
+    $university = $_POST['university']; // Add this line to capture the selected university
 
     if (!empty($email) && !empty($password) && !is_numeric($email)) {
-        $query = "INSERT INTO form (name, user, email, password) VALUES ('$name', '$user', '$email', '$password')";
+        $query = "INSERT INTO form (name, user, email, password, university) VALUES ('$name', '$user', '$email', '$password', '$university')";
         mysqli_query($con, $query);
 
         // Store user information in sessions
         $_SESSION['name'] = $name;
         $_SESSION['email'] = $email;
         $_SESSION['userID'] = $user;
-        $_SESSION['university'] = $university;
+        $_SESSION['university'] = $university; // Update the session variable
 
         // Redirect to the profile.php page
         header("Location: LoginPage.php");
@@ -27,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,15 +64,43 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <input type="password" name="pass" id="password" placeholder="Enter your password">
             </div>
 
+        <div class="input-group">
+                <label for="university">University</label>
+            <select name="university" id="universityDropdown">
+                <option value="">Select your university</option>
+                <option value="University of California, Irvine">University of California, Irvine</option>
+                <option value="California State University, Fullerton">California State University, Fullerton</option>
+                <option value="Chapman University">Chapman University</option>
+                <option value="Orange Coast College">Orange Coast College</option>
+                <option value="Saddleback College">Saddleback College</option>
+                <!-- Add more options as needed -->
+        </select>
+        </div>
+
+
             <div class="btn-field"> 
                 <button type="submit" id="signupBtn"> Sign Up </button>
             </div>
+
+
             
             <p>Already have an account? <a href='LoginPage.php' > Login </p>
 
         </form>
     </div>
 </div>
+
+<script>
+        const collegeDropdown = document.getElementById("collegeDropdown");
+        const selectedCollege = document.getElementById("selectedCollege");
+
+        collegeDropdown.addEventListener("change", function () 
+        {
+            selectedCollege.textContent = collegeDropdown.options[collegeDropdown.selectedIndex].text;
+        });
+    
+</script>
+
 <script>
 let signinBtn = document.getElementById("signinBtn");
 let signupBtn = document.getElementById("signupBtn");
@@ -90,7 +120,6 @@ signupBtn.onclick = function() {
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
 }
-
 </script>
 
 
