@@ -21,3 +21,23 @@ function searchFunction() {
         }
     }
 }
+
+
+/* < ---- bookmark -- > */
+document.addEventListener('DOMContentLoaded', function() {
+    var bookmarkBtn = document.getElementById('bookmarkBtn');
+    bookmarkBtn.addEventListener('click', function() {
+        var pageName = this.getAttribute('data-page');
+        // Perform an AJAX request to the server
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Handle the response here if needed
+                alert('Page bookmarked!');
+            }
+        };
+        xhttp.open("POST", "bookmark.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("pageName=" + pageName);
+    });
+});

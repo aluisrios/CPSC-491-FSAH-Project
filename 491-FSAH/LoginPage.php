@@ -1,49 +1,40 @@
 <?php
-    session_start();
+session_start();
 
-    include("db.php");
+include("db.php");
 
-    if($_SERVER['REQUEST_METHOD'] == "POST")
-    {
-        $email = $_POST['user'];
-        $password = $_POST['pass'];
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $user = $_POST['user'];
+    $password = $_POST['pass'];
 
-        if(!empty($email) && !empty($password) && !is_numeric($email))
-        {
-            $query = "Select * from form where email = '$email' limit 1";
-            $result = mysqli_query($con, $query);
+    if (!empty($user) && !empty($password) && !is_numeric($user)) {
+        $query = "SELECT * FROM form WHERE user = '$user' LIMIT 1";
+        $result = mysqli_query($con, $query);
 
-            if($result) 
-            {
-                if($result && mysqli_num_rows($result) > 0)
-                {
-                    $user_data = mysqli_fetch_assoc($result);
-                    
-                    if($user_data['pass'] == $password);
-                    {
-                        header("location: index.php");
-                        die;
-                    }
-                }
+        if ($result && mysqli_num_rows($result) > 0) {
+            $user_data = mysqli_fetch_assoc($result);
+
+            if ($user_data['password'] == $password) {
+                // Store user information in sessions
+                $_SESSION['name'] = $user_data['name'];
+                $_SESSION['email'] = $user_data['email'];
+                $_SESSION['userID'] = $user_data['user'];
+                $_SESSION['university'] = $user_data['university'];
+
+                // Redirect to the profile.php page
+                header("Location: index.php");
+                exit;
             }
-
-            echo "<script type= 'text/javascript'> alert ('wrong username or password') </script>";
         }
-        else {
-            echo "<script type= 'text/javascript'> alert ('wrong username or password') </script>";
-        }
-
     }
 
+    // Handle login failure
+    echo "<script type='text/javascript'> alert('Wrong username or password') </script>";
+}
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,7 +65,6 @@
         </form>
     </div>
 </div>
-
 <script>
 let signinBtn = document.getElementById("signinBtn");
 let signupBtn = document.getElementById("signupBtn");

@@ -1,39 +1,41 @@
 <?php
-    session_start();
+session_start();
 
-    include("db.php");
+include("db.php");
 
-    if($_SERVER['REQUEST_METHOD'] == "POST")
-    {
-        $name = $_POST['fullname'];
-        $email = $_POST['user'];
-        $password = $_POST['pass'];
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $name = $_POST['fullname'];
+    $user = $_POST['user'];
+    $password = $_POST['pass'];
+    $email = $_POST['mail'];
 
-        if(!empty($email) && !empty($password) && !is_numeric($email))
-        {
-            $query = "insert into form (name, email, password) values ('$name' , '$email' , '$password')";
+    if (!empty($email) && !empty($password) && !is_numeric($email)) {
+        $query = "INSERT INTO form (name, user, email, password) VALUES ('$name', '$user', '$email', '$password')";
+        mysqli_query($con, $query);
 
-            mysqli_query($con, $query);
-        }
+        // Store user information in sessions
+        $_SESSION['name'] = $name;
+        $_SESSION['email'] = $email;
+        $_SESSION['userID'] = $user;
+        $_SESSION['university'] = $university;
 
-        else 
-        {
-            echo "<script type= 'text/javascript'> alert('please Enter some valid information') </script>";
-        }
+        // Redirect to the profile.php page
+        header("Location: LoginPage.php");
+        exit;
+    } else {
+        echo "<script type='text/javascript'> alert('Please enter valid information') </script>";
     }
-
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="CSS/LoginPage.css">
 </head>
-
 <body>
 <div class="login-container">
     <div class="form-box">
@@ -47,6 +49,12 @@
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" name="user" id="username" placeholder="Enter your username">
+            </div>
+
+            
+            <div class="input-group">
+                <label for="username">email</label>
+                <input type="text" name="mail" id="Email" placeholder="Enter your email">
             </div>
 
             <div class="input-group">
@@ -63,7 +71,6 @@
         </form>
     </div>
 </div>
-
 <script>
 let signinBtn = document.getElementById("signinBtn");
 let signupBtn = document.getElementById("signupBtn");
