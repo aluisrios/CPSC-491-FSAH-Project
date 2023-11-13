@@ -13,12 +13,9 @@
         <h2 id class="title">Bookmark</h2>
         
         <div class="Para">
-<<<<<<< HEAD:491-FSAH/page8.html
-                
-=======
-           
->>>>>>> 83e0786f5effb068c2f5e39978bae0872b1fdaec:491-FSAH/page8.php
-        </div>
+
     </div>
+    
+
 </body>
 </html>
