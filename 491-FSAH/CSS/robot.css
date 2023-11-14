@@ -136,7 +136,34 @@ body {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.robot-introduction {
+.additional-info
+{
+    font-size: 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 260px;  
+    left: 800px;  
+    width: 250px;  /* Set a specific width */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.help-message
+{
+    font-size: 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 260px;  
+    left: 800px;  
+    width: 250px;  /* Set a specific width */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.robot-introduction 
+{
     opacity: 0;
     animation: fadeIn 3s forwards 3s, fadeOut 3s forwards 6s;
 }
@@ -145,6 +172,7 @@ body {
     opacity: 0;
     animation: fadeIn 3s forwards 9s;
 }
+
 
 @keyframes fadeIn {
     to {
@@ -156,4 +184,97 @@ body {
     to {
         opacity: 0;
     }
+}
+
+#next-button {
+    position: relative;
+    top: 446px;
+    left: 290px;
+    display: block; /* or inline-block */
+    margin: 10px auto; /* centers the button if the parent has text-align: center */
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #333; /* Choose a color that makes the text visible against the background */
+    cursor: pointer;
+    background: none; /* Removes the background */
+    outline: none; /* Removes the outline to maintain the style on focus */
+}
+
+#next-button:hover {
+    color: #0051ff; /* Text color on hover */
+    border-color: #fff; /* Border color on hover */
+}
+
+.button-container {
+    text-align: center; /* This will center the buttons in the container */
+    position: relative;
+    top: 6px; /* Adjust the top position as needed */
+}
+
+#yes-button, #no-button {
+    display: inline-block; /* This makes the buttons sit next to each other */
+    margin: 0 10px; /* This gives a little space between the buttons */
+    padding: 10px 20px;
+    font-size: 25px;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    outline: none;
+}
+
+#yes-button:hover, #no-button:hover {
+    color: #0051ff;
+    border-color: #0051ff;
+}
+
+
+.help-message {
+    font-size: 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 260px;  
+    left: 800px;  
+    width: 250px;  /* Set a specific width */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.help-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+    grid-gap: 10px; /* Space between grid items */
+    justify-items: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    margin-top: 10px;
+}
+
+.help-buttons button {
+    position:relative;
+    right: 25px;
+    padding: 10px 20px;
+    color: black; /* Black text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent; /* No background color */
+    font-size: 25px; /* Font size for button text */
+}
+
+.help-buttons button:hover {
+    background-color: none;
+    color: #0051ff; /* Blue text color on hover */
+}
+
+
+.filter-prompt {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 100; /* To ensure it appears above other content */
 }
