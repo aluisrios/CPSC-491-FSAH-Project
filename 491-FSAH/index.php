@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSAH</title>
-    <link rel="stylesheet" href="styles.css" >
-    <link rel="stylesheet" href="robot.css">
+    <link rel="stylesheet" href="CSS/styles.css" >
+    <link rel="stylesheet" href="CSS/robot.css">
 </head>
 <body>
 
@@ -34,8 +34,9 @@
     <!-- Side panel -->
     <div class="side-panel" id="sidePanel">
         <div class="close-button" onclick="closeSidePanel()">×</div>
-        <a href="page7.html" class="Panelbubble-button" data-name="Support">Support</a>
-        <a href="page8.html" class="Panelbubble-button" data-name="Bookmark">Bookmark</a>
+        <a href="profile.php" class="Panelbubble-button" data-name="Filter">Profile</a>
+        <a href="supportPage.html" class="Panelbubble-button" data-name="Support">Support</a>
+        <a href="page8.php" class="Panelbubble-button" data-name="Bookmark">Bookmark</a>
         <a href="page9.html" class="Panelbubble-button" data-name="Filter">Filter</a>
 
     </div>
@@ -117,6 +118,6 @@
 </div>
 
 
-    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
