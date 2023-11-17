@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listener for the Support button
     supportButton.addEventListener('click', function() {
-        window.location.href = 'page7.html'; // Redirect to the support page
+        window.location.href = 'supportPage.html'; // Redirect to the support page
     });
 
     // Select the Continue button
@@ -147,6 +147,14 @@ document.addEventListener('DOMContentLoaded', function() {
         helpMessage.style.display = 'none';
     });
 });
+
+    // Select the Support button
+    var supportButton = document.getElementById('profile');
+
+    // Event listener for the Support button
+    supportButton.addEventListener('click', function() {
+        window.location.href = 'profile.php'; // Redirect to the support page
+    });
 
 
 

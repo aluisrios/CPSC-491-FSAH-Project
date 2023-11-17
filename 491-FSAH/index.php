@@ -34,7 +34,7 @@
     <!-- Side panel -->
     <div class="side-panel" id="sidePanel">
         <div class="close-button" onclick="closeSidePanel()">×</div>
-        <a href="profile.php" class="Panelbubble-button" data-name="Filter">Profile</a>
+        <a href="profile.php" class="Panelbubble-button" data-name="profile">Profile</a>
         <a href="supportPage.html" class="Panelbubble-button" data-name="Support">Support</a>
         <a href="page8.php" class="Panelbubble-button" data-name="Bookmark">Bookmark</a>
         <a href="page9.html" class="Panelbubble-button" data-name="Filter">Filter</a>
