@@ -28,9 +28,10 @@ function searchFunction() {
 
 /*application*/
 document.addEventListener('DOMContentLoaded', function() {
-    var form = document.querySelector('form');
-    form.onsubmit = function(event) {
-        event.preventDefault(); // Always prevent default to control the flow
+    var form = document.getElementById('financialAidForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
 
         var income = parseFloat(document.getElementById('income').value);
         var messageDiv = document.getElementById('message');
@@ -47,8 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Show the message with fade-in effect
         messageDiv.style.display = 'block';
-    };
+    });
 });
+
 
 
 /*robot*/
