@@ -40,10 +40,25 @@ document.addEventListener('DOMContentLoaded', function() {
         messageDiv.style.display = 'none';
         messageDiv.innerHTML = '';
 
+        var printButton = document.getElementById('printButton');
+        if (printButton) {
+            // Remove the existing print button if it exists
+            printButton.parentNode.removeChild(printButton);
+        }
+
         if (isNaN(income) || income > 40000) {
             messageDiv.innerHTML = 'You do not qualify for financial aid as your annual income is more than $40,000.';
         } else {
             messageDiv.innerHTML = 'You qualify for financial aid.';
+            
+            // Create and append the print button if qualified
+            var newPrintButton = document.createElement('button');
+            newPrintButton.id = 'printButton';
+            newPrintButton.textContent = 'Print';
+            newPrintButton.addEventListener('click', function() {
+                window.print();
+            });
+            document.body.appendChild(newPrintButton);
         }
 
         // Show the message with fade-in effect

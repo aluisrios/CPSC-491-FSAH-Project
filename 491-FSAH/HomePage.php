@@ -12,7 +12,7 @@
             <ul>
                 <li><a href="HomePage.php">Home</a></li>
                 <li><a href="SignUp.php">Apply</a></li>
-                <li><a href="#">Support</a></li>
+                <li><a href="supportPage.html">Support</a></li>
             </ul>
         </div>
 
@@ -22,8 +22,8 @@
         <br>we can help with any question you make have, or how you could apply. </p>
        
         <div class="button">
-            <a href='SignUp.php'><button type="button"><span></span>APPLY</button></a>
-            <button tyoe="button"><span></span> SUPPORT </button>
+            <a href='SignUp.php'><button type="button"><span></span>Apply</button></a>
+            <a href='supportPage.html'><button type="button"><span></span>Support</button></a>
         </div>
 
     </div>
