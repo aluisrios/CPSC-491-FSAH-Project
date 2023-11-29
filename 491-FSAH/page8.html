@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Pages.css">
+    <title>Bookmark Confirmation</title>
+    <script>
+        function checkBookmark() {
+            if (localStorage.getItem('bookmarked') === 'true') {
+                document.getElementById('backLink').innerHTML = `
+                    <p>Click <a href="page1.html">here</a> to return to Cal Grant A</p>
+                    <button onclick="deleteBookmark()">Delete Bookmark</button>
+                `;
+            } else {
+                document.getElementById('backLink').innerHTML = '<p>No bookmark set.</p>';
+            }
+        }
+
+        function deleteBookmark() {
+            localStorage.removeItem('bookmarked');
+            checkBookmark(); // Update the display after deleting the bookmark
+        }
+    </script>
+</head>
+<body onload="checkBookmark()">
+    <a href="index.php">Home</a>
+
+    <div class="pages">
+        <h2 class="title">Bookmark</h2>
+        
+        <div class="Para">
+            <p>You have visited the bookmark page.</p>
+            <div id="backLink"></div>
+        </div>
+    </div>
+</body>
+</html>

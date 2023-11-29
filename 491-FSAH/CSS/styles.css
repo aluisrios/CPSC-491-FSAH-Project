@@ -71,7 +71,7 @@
 /* Styles for the search bar and button */
 .search-container {
     position: relative;
-    right: 700px;
+    right: 550px;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -81,7 +81,7 @@
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    width: 200px;
+    width: 300px;
 }
 
 button {
