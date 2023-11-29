@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="CSS/Pages.css">
-
+    <title>Cal Grant B</title>
+    <script>
+        function handleBookmark() {
+            localStorage.setItem('bookmarked_CalGrantB', 'true');
+            window.location.href = 'page8.html';
+        }
+    </script>
 </head>
 <body>
-    <a href="index.php">Home</a> | <a href="#bookmark">Bookmark</a>
+    <a href="index.php">Home</a> | <a href="page8.html">Bookmark</a>
 
     <div class="pages">   
-        
-        <h2 id class="title"> Cal Grant B </h2>
+        <h2 class="title">Cal Grant B</h2>
         
         <div class="Para">
-            <p>Entitlement and Competitive grants consist of a subsistence allowance and, for renewal recipients, an award for registration fees.
-            Eligibility is based on demonstration of substantial financial need.</p>
-
+            <p>Entitlement and Competitive grants consist of a subsistence allowance and, for renewal recipients, an award for registration fees. Eligibility is based on demonstration of substantial financial need.</p>
             <p>CSUF Award Maximum: $5,742</p>
         </div>
-
-        <!-- Apply Now button -->
         <button onclick="location.href='application.html'">Apply Now</button>
-
-
-        <!-- Bookmark button with data-page attribute -->
-         <button id="bookmarkBtn" data-page="CalGrantA">Bookmark</button>
-
-
-
-        
+        <button onclick="handleBookmark()">Bookmark</button>
     </div>
+</body>
+</html>

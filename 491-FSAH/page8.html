@@ -7,18 +7,27 @@
     <title>Bookmark Confirmation</title>
     <script>
         function checkBookmark() {
-            if (localStorage.getItem('bookmarked') === 'true') {
-                document.getElementById('backLink').innerHTML = `
-                    <p>Click <a href="page1.html">here</a> to return to Cal Grant A</p>
-                    <button onclick="deleteBookmark()">Delete Bookmark</button>
-                `;
-            } else {
-                document.getElementById('backLink').innerHTML = '<p>No bookmark set.</p>';
+            let content = '';
+
+            if (localStorage.getItem('bookmarked_CalGrantA') === 'true') {
+                content += `<p>Click <a href="page1.html">here</a> to return to Cal Grant A</p>
+                            <button onclick="deleteBookmark('CalGrantA')">Delete Cal Grant A Bookmark</button>`;
             }
+
+            if (localStorage.getItem('bookmarked_CalGrantB') === 'true') {
+                content += `<p>Click <a href="page2.html">here</a> to return to Cal Grant B</p>
+                            <button onclick="deleteBookmark('CalGrantB')">Delete Cal Grant B Bookmark</button>`;
+            }
+
+            if (content === '') {
+                content = '<p>No bookmark set.</p>';
+            }
+
+            document.getElementById('backLink').innerHTML = content;
         }
 
-        function deleteBookmark() {
-            localStorage.removeItem('bookmarked');
+        function deleteBookmark(grantType) {
+            localStorage.removeItem('bookmarked_' + grantType);
             checkBookmark(); // Update the display after deleting the bookmark
         }
     </script>
@@ -31,7 +40,7 @@
         
         <div class="Para">
             <p>You have visited the bookmark page.</p>
-            <div id="backLink"></div>
+            <div id="backLink"><!-- Bookmark links will be displayed here --></div>
         </div>
     </div>
 </body>
