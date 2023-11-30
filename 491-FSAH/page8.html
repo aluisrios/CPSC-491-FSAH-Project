@@ -19,6 +19,26 @@
                             <button onclick="deleteBookmark('CalGrantB')">Delete Cal Grant B Bookmark</button>`;
             }
 
+            if (localStorage.getItem('bookmarked_PellGrant') === 'true') {
+                content += `<p>Click <a href="page3.html">here</a> to return to Pell Grant</p>
+                            <button onclick="deleteBookmark('CalGrantB')">Delete Pell Grant Bookmark</button>`;
+            }
+
+            if (localStorage.getItem('bookmarked_FSEOG') === 'true') {
+                content += `<p>Click <a href="page4.html">here</a> to return to FSEOG</p>
+                            <button onclick="deleteBookmark('CalGrantB')">Delete FSEOG Bookmark</button>`;
+            }
+
+            if (localStorage.getItem('bookmarked_MCS') === 'true') {
+                content += `<p>Click <a href="page5.html">here</a> to return to MCS</p>
+                            <button onclick="deleteBookmark('CalGrantB')">Delete MCS Bookmark</button>`;
+            }
+
+            if (localStorage.getItem('bookmarked_SUG') === 'true') {
+                content += `<p>Click <a href="page6.html">here</a> to return to SUG</p>
+                            <button onclick="deleteBookmark('CalGrantB')">Delete SUG Bookmark</button>`;
+            }
+
             if (content === '') {
                 content = '<p>No bookmark set.</p>';
             }

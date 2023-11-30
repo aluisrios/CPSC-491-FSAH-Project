@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="CSS/Pages.css">
-
+    <script>
+        function handleBookmark() {
+            localStorage.setItem('bookmarked_PellGrant', 'true');
+            window.location.href = 'page8.html';
+        }
+    </script>
 </head>
 <body>
-    <a href="index.php">Home</a> | <a href="#bookmark">Bookmark</a>
+    <a href="index.php">Home</a> | <a href="page8.html">Bookmark</a>
 
     <div class="pages">   
         
@@ -24,15 +28,9 @@
 
             <p>CSUF Award Maximum for 2020-2021: $6,345.</p>
         </div>
-        <!-- Apply Now button -->
         <button onclick="location.href='application.html'">Apply Now</button>
-
-
-        <!-- Bookmark button with data-page attribute -->
-         <button id="bookmarkBtn" data-page="CalGrantA">Bookmark</button>
-
-
-
-        
+        <button onclick="handleBookmark()">Bookmark</button>
     </div>
+</body>
+</html>
  

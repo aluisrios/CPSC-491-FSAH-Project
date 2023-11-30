@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="CSS/Pages.css">
+    <script>
+        function handleBookmark() {
+            localStorage.setItem('bookmarked_MCS', 'true');
+            window.location.href = 'page8.html';
+        }
+    </script>
 
 </head>
 <body>
-    <a href="index.php">Home</a> | <a href="#bookmark">Bookmark</a>
+    <a href="index.php">Home</a> | <a href="page8.html">Bookmark</a>
 
     <div class="pages">   
         
@@ -17,16 +22,13 @@
         <div class="Para">
             <p>A program that provides undergraduate students with family incomes up to $150,000 and a maximum annual household asset amount of $150,000, with funding assistance for tuition.</p>
             <p>CSUF Annual Awards: Based on family income, students may be eligible for a scholarship of up to 20 percent of the mandatory system-wide tuition and fees.</p>
-
-            <!-- Apply Now button -->
             <button onclick="location.href='application.html'">Apply Now</button>
-
-
-            <!-- Bookmark button with data-page attribute -->
-             <button id="bookmarkBtn" data-page="CalGrantA">Bookmark</button>
+            <button onclick="handleBookmark()">Bookmark</button>
                 
         </div>
 
+ </body>
+</html>
 
 
         
