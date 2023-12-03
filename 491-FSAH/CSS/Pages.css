@@ -1,17 +1,35 @@
+body {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    background-color: lightgray;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
 /* Paragraph Style */
 .Para {
     margin-bottom: 1em; /* Adds spacing after each paragraph */
     font-family: Arial, sans-serif; /* Using a common web-safe font */
     font-size: 18px; /* Default font size for the entire page */
     line-height: 1.6; /* For better readability */  
+    color: black;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 .pages{
     font-size: 24px;  
 }
 
+.title { 
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
 /* Link Style */
 a {
-    color: rgb(0, 0, 255); /* You can choose any color you like */
+    color: rgb(0, 0, 0); /* You can choose any color you like */
     text-decoration: none; /* Removes underline from links */
 }
 
@@ -34,4 +52,26 @@ margin-top: 10px;
 
 .apply-button:hover {
 background-color: #2980b9;
+}
+
+button.apply-now {
+    background-color: rgb(0, 0, 0); /* Set the background color */
+    color: white; /* Set the text color */
+    padding: 10px 20px; /* Adjust padding */
+    border: none; /* Remove the button border */
+    cursor: pointer; /* Set cursor style */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Adjust margin if needed */
+}
+
+/* Additional styles for the button when hovered */
+button.apply-now:hover {
+    background-color: darkblue; /* Change color on hover */
+}
+
+.button-container {
+    text-align: center; /* Center the buttons horizontally */
+    position: fixed; /* Position the container */
+    bottom: 20px; /* Adjust this value for vertical positioning */
+    width: 100%; /* Ensure full width */
 }
