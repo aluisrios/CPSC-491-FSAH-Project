@@ -42,6 +42,7 @@
     <a href="supportPage.html" class="Panelbubble-button" data-name="Support">Support</a>
     <a href="page8.html" class="Panelbubble-button" data-name="Bookmark">Bookmark</a>
     <a href="page9.html" class="Panelbubble-button" data-name="filter">Filter</a>
+    <a href="FAQ.html" class="Panelbubble-button" data-name="FAQ">FAQ</a>
 </div>
 
 <!-- Flex container for robot and messages -->
