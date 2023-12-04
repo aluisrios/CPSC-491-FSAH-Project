@@ -122,12 +122,15 @@ body {
     background-color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
-    position: absolute;
-    top: 260px;  
-    left: 800px;  
-    width: 250px;  /* Set a specific width */
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-    left: calc(800px + 20px); 
+    position: static; /* Changed from absolute */
+    width: 250px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
 }
 
 .robot-introduction {
@@ -154,8 +157,8 @@ body {
 
 #next-button {
     position: relative;
-    top: 470px;
-    left: 290px;
+    top: -40px;
+    left: 50px;
     display: block; /* or inline-block */
     margin: 10px auto; /* centers the button if the parent has text-align: center */
     padding: 10px 20px;
@@ -174,7 +177,7 @@ body {
 .button-container {
     text-align: center; /* This will center the buttons in the container */
     position: relative;
-    top: 6px; /* Adjust the top position as needed */
+    top: 6px; 
 }
 
 #yes-button, #no-button {
@@ -198,11 +201,10 @@ body {
     background-color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
-    position: absolute;
-    top: 260px;  
-    left: 800px;  
-    width: 250px;  /* Set a specific width */
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    position: static; /* Changed from absolute */
+    width: 250px; /* Set a specific width */
+    margin-bottom: 10px; /* Consistent margin for spacing between messages */
 }
 
 .help-buttons {
@@ -241,4 +243,21 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 100; /* To ensure it appears above other content */
+}
+
+.robot-and-messages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusts the alignment to create space */
+    gap: 10px; /* Space between robot and messages */
+    width: 80%; /* Ensure the container spans the full width */
+}
+
+
+/* Robot container */
+.robot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
