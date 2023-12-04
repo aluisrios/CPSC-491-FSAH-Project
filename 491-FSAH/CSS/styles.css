@@ -1,8 +1,8 @@
 .top-container {
     display: flex;
-    justify-content: space-between;  /* Distributes items evenly */
-    align-items: center;  /* Vertically center items */
-    padding: 10px 0;  /* Some padding to give it some space */
+    justify-content: space-between; /* Distributes items to start and end */
+    align-items: center; /* Vertically center items */
+    padding: 10px;
     color: #fff; /* White text color */
 }
 
@@ -56,7 +56,9 @@
 }
 
 .menu-button {
-    margin-top: -25px;  /* Adjust as needed */
+    cursor: pointer;
+    font-size: 35px;
+    color: orange;
 }
 
 .close-button {
@@ -68,20 +70,18 @@
     color: #ffffff;
 }
 
-/* Styles for the search bar and button */
 .search-container {
-    position: relative;
-    right: 550px;
+    flex: 1; /* Allows the container to grow and take up available space */
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    justify-content: center; /* Centers the search bar within the search-container */
 }
 
 #searchInput {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    width: 300px;
+    width: 100%; /* Adjust width as necessary */
+    max-width: 300px; /* Prevents the search bar from getting too wide */
 }
 
 button {
@@ -93,3 +93,16 @@ button {
     cursor: pointer;
     margin-left: 10px;
 }
+
+
+.top-right-buttons {
+    display: flex;
+    align-items: center;
+}
+
+
+.top-right-buttons button {
+    margin-left: 10px; /* Space between buttons */
+    
+}
+

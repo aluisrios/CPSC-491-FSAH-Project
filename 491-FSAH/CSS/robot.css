@@ -111,59 +111,20 @@ body {
     }
 }
 
+.robot-introduction, .website-prompt, .additional-info, .help-message {
+    font-size: 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 260px;  
+    left: 800px;  
+    width: 250px;  /* Set a specific width */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    left: calc(800px + 20px); 
+}
+
 .robot-introduction {
-    font-size: 20px;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    position: absolute;
-    top: 260px;  
-    left: 800px;  
-    width: 250px;  /* Set a specific width */
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.website-prompt
-{
-    font-size: 20px;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    position: absolute;
-    top: 260px;  
-    left: 800px;  
-    width: 250px;  /* Set a specific width */
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.additional-info
-{
-    font-size: 20px;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    position: absolute;
-    top: 260px;  
-    left: 800px;  
-    width: 250px;  /* Set a specific width */
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.help-message
-{
-    font-size: 20px;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    position: absolute;
-    top: 260px;  
-    left: 800px;  
-    width: 250px;  /* Set a specific width */
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.robot-introduction 
-{
     opacity: 0;
     animation: fadeIn 3s forwards 3s, fadeOut 3s forwards 6s;
 }
@@ -172,7 +133,6 @@ body {
     opacity: 0;
     animation: fadeIn 3s forwards 9s;
 }
-
 
 @keyframes fadeIn {
     to {
@@ -188,7 +148,7 @@ body {
 
 #next-button {
     position: relative;
-    top: 446px;
+    top: 470px;
     left: 290px;
     display: block; /* or inline-block */
     margin: 10px auto; /* centers the button if the parent has text-align: center */
@@ -227,7 +187,6 @@ body {
     border-color: #0051ff;
 }
 
-
 .help-message {
     font-size: 20px;
     background-color: #ffffff;
@@ -265,7 +224,6 @@ body {
     background-color: none;
     color: #0051ff; /* Blue text color on hover */
 }
-
 
 .filter-prompt {
     position: fixed;
