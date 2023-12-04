@@ -105,11 +105,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Select the Filter button
-    var filterButton = document.getElementById('filter');
+    var filterButton = document.getElementById('FAQ');
 
     // Event listener for the Filter button
     filterButton.addEventListener('click', function() {
-        window.location.href = 'page9.html';
+        window.location.href = 'FAQ.html';
     });
     
     // Select the Continue button

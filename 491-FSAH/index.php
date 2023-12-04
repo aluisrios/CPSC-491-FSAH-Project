@@ -42,7 +42,6 @@
     <a href="profile.php" class="Panelbubble-button" data-name="profile">Profile</a>
     <a href="supportPage.html" class="Panelbubble-button" data-name="Support">Support</a>
     <a href="page8.html" class="Panelbubble-button" data-name="Bookmark">Bookmark</a>
-    <a href="page9.html" class="Panelbubble-button" data-name="filter">Filter</a>
     <a href="FAQ.html" class="Panelbubble-button" data-name="FAQ">FAQ</a>
 </div>
 
@@ -79,7 +78,7 @@
         <div class="help-message" style="display: none;">
             How can I help you?
             <div class="help-buttons">
-                <button id="filter">Filter</button>
+                <button id="FAQ">FAQ</button>
                 <button id="support">Support</button>
                 <button id="profile">Profile</button>
                 <button id="continue">Continue</button>
