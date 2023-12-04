@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="icon" type="img/x-icon" href="/CPSC-491-FSAH-Project-main/491-FSAH/img/favicon.ico">
     <link rel="stylesheet" href="CSS/Home.css">
 </head>
 

@@ -29,6 +29,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="img/x-icon" href="/CPSC-491-FSAH-Project-main/491-FSAH/img/favicon.ico">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Bookmarks</title>
