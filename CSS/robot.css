@@ -1,0 +1,263 @@
+body {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(42, 42, 238, 0.8), rgba(0, 0, 0, 0.8)), url("sky.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    margin: auto;
+    height: 40px;
+    width: 65px;
+    background: black;
+    border-radius: 20px 20px 10px 10px;
+}
+
+.head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    margin: auto;
+    height: 75px;
+    width: 100px;
+    z-index: -1;
+    background: white;
+    border-radius: 60px 60px 10px 10px;
+}
+
+.body {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 120px;
+    width: 115px;
+    background: white;
+    border-radius: 20px 20px 100px 100px;
+}
+
+.left-hand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 230px;
+    bottom: 25px;
+    margin: auto;
+    height: 30px;
+    width: 100px;
+    background: white;
+    border-radius: 10px 10px 50px 10px;
+    transform: rotateZ(45deg);
+    animation: hand 1s linear infinite 0s;
+}
+
+.right-hand {
+    position: absolute;
+    top: 50px;
+    left: 165px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 30px;
+    width: 100px;
+    background: white;
+    border-radius: 10px 10px 10px 50px;
+    transform: rotateZ(90deg);
+}
+
+.eye1, .eye2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 25px;
+    bottom: 150px;
+    margin: auto;
+    height: 10px;
+    width: 15px;
+    background: repeating-linear-gradient(blue 70%, #002966 80%, blue);
+    border-radius: 50px 50px 20px 20px;
+    animation: blink 5s linear infinite;
+}
+
+.eye2 {
+    left: 25px;
+    right: 0;
+}
+
+@keyframes blink {
+    0%, 90%, 100% {
+        height: 10px;
+    }
+    95% {
+        height: 1px;
+    }
+}
+
+@keyframes hand {
+    0% {
+        transform: translateY(-40px) rotateZ(45deg);
+    }
+    50% {
+        transform: translateY(0px) rotateZ(0deg);
+    }
+    100% {
+        transform: translateY(-40px) rotateZ(45deg);
+    }
+}
+
+.robot-introduction, .website-prompt, .additional-info, .help-message {
+    font-size: 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: static; /* Changed from absolute */
+    width: 250px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+}
+
+.robot-introduction {
+    opacity: 0;
+    animation: fadeIn 3s forwards 3s, fadeOut 3s forwards 6s;
+}
+
+.website-prompt {
+    opacity: 0;
+    animation: fadeIn 3s forwards 9s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+#next-button {
+    position: relative;
+    top: -40px;
+    left: 50px;
+    display: block; /* or inline-block */
+    margin: 10px auto; /* centers the button if the parent has text-align: center */
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #333; /* Choose a color that makes the text visible against the background */
+    cursor: pointer;
+    background: none; /* Removes the background */
+    outline: none; /* Removes the outline to maintain the style on focus */
+}
+
+#next-button:hover {
+    color: #0051ff; /* Text color on hover */
+    border-color: #fff; /* Border color on hover */
+}
+
+.button-container {
+    text-align: center; /* This will center the buttons in the container */
+    position: relative;
+    top: 6px; 
+}
+
+#yes-button, #no-button {
+    display: inline-block; /* This makes the buttons sit next to each other */
+    margin: 0 10px; /* This gives a little space between the buttons */
+    padding: 10px 20px;
+    font-size: 25px;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    outline: none;
+}
+
+#yes-button:hover, #no-button:hover {
+    color: #0051ff;
+    border-color: #0051ff;
+}
+
+.help-message {
+    font-size: 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    position: static; /* Changed from absolute */
+    width: 250px; /* Set a specific width */
+    margin-bottom: 10px; /* Consistent margin for spacing between messages */
+}
+
+.help-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+    grid-gap: 10px; /* Space between grid items */
+    justify-items: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    margin-top: 10px;
+}
+
+.help-buttons button {
+    position:relative;
+    right: 25px;
+    padding: 10px 20px;
+    color: black; /* Black text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent; /* No background color */
+    font-size: 25px; /* Font size for button text */
+}
+
+.help-buttons button:hover {
+    background-color: none;
+    color: #0051ff; /* Blue text color on hover */
+}
+
+.filter-prompt {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 100; /* To ensure it appears above other content */
+}
+
+.robot-and-messages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusts the alignment to create space */
+    gap: 10px; /* Space between robot and messages */
+    width: 80%; /* Ensure the container spans the full width */
+}
+
+
+/* Robot container */
+.robot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
