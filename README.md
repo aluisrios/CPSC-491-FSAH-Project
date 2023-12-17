@@ -3,6 +3,7 @@ Department of Computer Science and Engineering
 California State University, Fullerton
 Project Advisor: Lidia Morrison
 Team: Axel Ramos, Luis Rios, Christian Lara
+
 Course: CPSC 491-04
 Fall 2023
 
